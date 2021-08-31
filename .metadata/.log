@@ -349,3 +349,30 @@ Project's 'external_led_blink' active one is 'external_led_blink.ioc' file
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-08-23 12:46:19.867
 !MESSAGE Indexed 'external_led_blink' (19 sources, 78 headers) in 2.51 sec: 3,666 declarations; 13,304 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+!SESSION 2021-08-30 21:03:36.557 -----------------------------------------------
+eclipse.buildId=Version 1.6.1
+java.version=11.0.9.1
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-08-30 21:03:41.632
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-08-30 21:04:01.755
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-08-30 21:04:02.283
+!MESSAGE Log4j initialized with config file C:\Users\nicol\Documents\3o ANO ELO\pibiti\projetos\pibiti2021\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-08-30 21:04:31.189
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-08-30 21:04:31.949
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-08-30 21:21:58.110
+!MESSAGE Indexed 'Led wit Button' (18 sources, 79 headers) in 7 sec: 3,649 declarations; 13,803 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.011%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-08-30 21:44:25.485
+!MESSAGE Indexed 'read_push_button' (19 sources, 78 headers) in 2.02 sec: 3,665 declarations; 13,278 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)

@@ -796,3 +796,12 @@
 2021-08-23 12:47:54,539 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 3537mS.
 2021-08-23 12:47:54,542 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 2mS.
 2021-08-23 12:47:54,546 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-08-23 15:19:51,625 [INFO] MainUpdater:2661 - connection check result : 10
+2021-08-23 15:19:52,084 [INFO] CrossSelectorPresenter:1330 - Cross Selector saved comparison directory: C:\Users\nicol\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2021-08-23 15:19:52,125 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2021-08-23 15:19:52,134 [INFO] FinderPluginLoader:87 - Searching for filters in installed packs
+2021-08-23 15:19:52,712 [WARN] DetailPanel:315 - Failed to get advertising image, set to default
+2021-08-30 21:04:02,283 [INFO] Activator:170 - 
+
+
+2021-08-30 21:04:02,328 [INFO] Activator:171 - !SESSION log4j initialized
