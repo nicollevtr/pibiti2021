@@ -1,0 +1,10 @@
+20:50:07 **** Incremental Build of configuration Debug for project BotaoEXTI ****
+make -j8 all 
+arm-none-eabi-size   BotaoEXTI.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5960	     20	   1572	   7552	   1d80	BotaoEXTI.elf
+Finished building: default.size.stdout
+ 
+
+20:50:07 Build Finished. 0 errors, 0 warnings. (took 551ms)
+

@@ -1,0 +1,10 @@
+15:59:17 **** Incremental Build of configuration Debug for project aula1104_piscaled_delay_assembly ****
+make -j8 all 
+arm-none-eabi-size   aula1104_piscaled_delay_assembly.elf 
+   text	   data	    bss	    dec	    hex	filename
+    112	      0	      0	    112	     70	aula1104_piscaled_delay_assembly.elf
+Finished building: default.size.stdout
+ 
+
+15:59:17 Build Finished. 0 errors, 0 warnings. (took 179ms)
+

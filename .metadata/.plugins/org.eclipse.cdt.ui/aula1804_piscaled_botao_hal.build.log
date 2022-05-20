@@ -1,0 +1,10 @@
+10:41:24 **** Build of configuration Debug for project aula1804_piscaled_botao_hal ****
+make -j8 all 
+arm-none-eabi-size   aula1804_piscaled_botao_hal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5768	     20	   1572	   7360	   1cc0	aula1804_piscaled_botao_hal.elf
+Finished building: default.size.stdout
+ 
+
+10:41:27 Build Finished. 0 errors, 0 warnings. (took 3s.442ms)
+

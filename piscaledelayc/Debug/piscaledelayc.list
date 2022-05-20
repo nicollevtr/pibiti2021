@@ -1,0 +1,125 @@
+
+piscaledelayc.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .vector       00000008  08000000  08000000  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000080  08000008  08000008  00010008  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .init         00000004  08000088  08000088  00010088  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .fini         00000004  0800008c  0800008c  0001008c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .ARM.attributes 00000030  00000000  00000000  00010090  2**0
+                  CONTENTS, READONLY
+  5 .comment      00000053  00000000  00000000  000100c0  2**0
+                  CONTENTS, READONLY
+  6 .debug_info   000000c9  00000000  00000000  00010113  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_abbrev 000000a1  00000000  00000000  000101dc  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_aranges 00000020  00000000  00000000  0001027d  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_ranges 00000010  00000000  00000000  0001029d  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_macro  00000abf  00000000  00000000  000102ad  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_line   0000008d  00000000  00000000  00010d6c  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .debug_str    00002dd4  00000000  00000000  00010df9  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_frame  0000002c  00000000  00000000  00013bd0  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+
+Disassembly of section .text:
+
+08000008 <init>:
+void init()
+{
+ 8000008:	b480      	push	{r7}
+ 800000a:	b085      	sub	sp, #20
+ 800000c:	af00      	add	r7, sp, #0
+*((int*)(0x40023800 + 0x30)) = 0x00000008;
+ 800000e:	4b17      	ldr	r3, [pc, #92]	; (800006c <init+0x64>)
+ 8000010:	2208      	movs	r2, #8
+ 8000012:	601a      	str	r2, [r3, #0]
+*((int*)(0x40020C00 + 0x00)) = 0x01000000;
+ 8000014:	4b16      	ldr	r3, [pc, #88]	; (8000070 <init+0x68>)
+ 8000016:	f04f 7280 	mov.w	r2, #16777216	; 0x1000000
+ 800001a:	601a      	str	r2, [r3, #0]
+*((int*)(0x40020C00 + 0x04)) = 0x00000000;
+ 800001c:	4b15      	ldr	r3, [pc, #84]	; (8000074 <init+0x6c>)
+ 800001e:	2200      	movs	r2, #0
+ 8000020:	601a      	str	r2, [r3, #0]
+*((int*)(0x40020C00 + 0x08)) = 0x00000000;
+ 8000022:	4b15      	ldr	r3, [pc, #84]	; (8000078 <init+0x70>)
+ 8000024:	2200      	movs	r2, #0
+ 8000026:	601a      	str	r2, [r3, #0]
+*((int*)(0x40020C00 + 0x0C)) = 0x00000000;
+ 8000028:	4b14      	ldr	r3, [pc, #80]	; (800007c <init+0x74>)
+ 800002a:	2200      	movs	r2, #0
+ 800002c:	601a      	str	r2, [r3, #0]
+
+int on = 0x1000;
+ 800002e:	f44f 5380 	mov.w	r3, #4096	; 0x1000
+ 8000032:	60bb      	str	r3, [r7, #8]
+int off = 0x0000;
+ 8000034:	2300      	movs	r3, #0
+ 8000036:	607b      	str	r3, [r7, #4]
+int i;
+int * odr = (int*)(0x40020C00 + 0x14);
+ 8000038:	4b11      	ldr	r3, [pc, #68]	; (8000080 <init+0x78>)
+ 800003a:	603b      	str	r3, [r7, #0]
+
+loop:
+	i = 800000;
+ 800003c:	4b11      	ldr	r3, [pc, #68]	; (8000084 <init+0x7c>)
+ 800003e:	60fb      	str	r3, [r7, #12]
+	*odr = on;
+ 8000040:	683b      	ldr	r3, [r7, #0]
+ 8000042:	68ba      	ldr	r2, [r7, #8]
+ 8000044:	601a      	str	r2, [r3, #0]
+	while(i--);
+ 8000046:	bf00      	nop
+ 8000048:	68fb      	ldr	r3, [r7, #12]
+ 800004a:	1e5a      	subs	r2, r3, #1
+ 800004c:	60fa      	str	r2, [r7, #12]
+ 800004e:	2b00      	cmp	r3, #0
+ 8000050:	d1fa      	bne.n	8000048 <init+0x40>
+	*odr = off;
+ 8000052:	683b      	ldr	r3, [r7, #0]
+ 8000054:	687a      	ldr	r2, [r7, #4]
+ 8000056:	601a      	str	r2, [r3, #0]
+	i = 800000;
+ 8000058:	4b0a      	ldr	r3, [pc, #40]	; (8000084 <init+0x7c>)
+ 800005a:	60fb      	str	r3, [r7, #12]
+	while(i--);
+ 800005c:	bf00      	nop
+ 800005e:	68fb      	ldr	r3, [r7, #12]
+ 8000060:	1e5a      	subs	r2, r3, #1
+ 8000062:	60fa      	str	r2, [r7, #12]
+ 8000064:	2b00      	cmp	r3, #0
+ 8000066:	d1fa      	bne.n	800005e <init+0x56>
+	goto loop;
+ 8000068:	e7e8      	b.n	800003c <init+0x34>
+ 800006a:	bf00      	nop
+ 800006c:	40023830 	.word	0x40023830
+ 8000070:	40020c00 	.word	0x40020c00
+ 8000074:	40020c04 	.word	0x40020c04
+ 8000078:	40020c08 	.word	0x40020c08
+ 800007c:	40020c0c 	.word	0x40020c0c
+ 8000080:	40020c14 	.word	0x40020c14
+ 8000084:	000c3500 	.word	0x000c3500
+
+Disassembly of section .init:
+
+08000088 <_init>:
+ 8000088:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800008a:	bf00      	nop
+
+Disassembly of section .fini:
+
+0800008c <_fini>:
+ 800008c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800008e:	bf00      	nop

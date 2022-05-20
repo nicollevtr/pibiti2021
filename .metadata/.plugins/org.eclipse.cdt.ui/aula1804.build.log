@@ -1,0 +1,10 @@
+15:07:38 **** Incremental Build of configuration Debug for project aula1804 ****
+make -j8 all 
+arm-none-eabi-size   aula1804.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5768	     20	   1572	   7360	   1cc0	aula1804.elf
+Finished building: default.size.stdout
+ 
+
+15:07:38 Build Finished. 0 errors, 0 warnings. (took 227ms)
+

@@ -1,0 +1,9 @@
+15:23:01 **** Incremental Build of configuration Debug for project aula1804_piscaled_delay_c ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/ST/STM32CubeIDE_1.6.1/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_1.6.0.202102191308/jre/bin/client;C:/ST/STM32CubeIDE_1.6.1/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_1.6.0.202102191308/jre/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MATLAB\R2021b\bin;C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility;C:\Users\nicol\AppData\Local\Microsoft\WindowsApps;;C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE]
+
+15:23:01 Build Failed. 1 errors, 0 warnings. (took 79ms)
+
